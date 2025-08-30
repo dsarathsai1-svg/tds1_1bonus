@@ -180,8 +180,8 @@ def generate_deck():
         mimetype='application/vnd.openxmlformats-officedocument.presentationml.presentation'
     )
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+if __name__ == "__main__":
+    uvicorn.run("app:app", host="127.0.0.1", port=8000, reload=True)
 
 # --- How to Run and Test ---
 # 1. Make sure your `.env` file is in `decksmith-ai/backend` and contains your GOOGLE_API_KEY.
